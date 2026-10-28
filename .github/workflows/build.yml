@@ -9,6 +9,22 @@ on:
     - master
 
 jobs:
+  folder-view-tests:
+    runs-on: windows-2022
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v7
+      with:
+        fetch-depth: 0
+    - name: Install .NET SDKs
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: |
+          6.0.x
+          10.0.x
+    - name: Test folder ordering and file-change notifications
+      run: dotnet test "Cairo Desktop/Tests/CairoDesktop.FolderView.Tests/CairoDesktop.FolderView.Tests.csproj" --configuration Release
+
   build:
     strategy:
       matrix:

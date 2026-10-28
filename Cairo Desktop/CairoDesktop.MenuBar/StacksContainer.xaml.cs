@@ -265,17 +265,14 @@ namespace CairoDesktop.MenuBar
             {
                 if (menuItem.Items.Count > 0 && menuItem.Items[0] is MenuItem subMenuItem)
                 {
-                    if (!(subMenuItem.Header is StacksScroller))
+                    StacksScroller scroller = new StacksScroller()
                     {
-                        StacksScroller scroller = new StacksScroller()
-                        {
-                            DataContext = menuItem.DataContext,
-                            ParentContainer = this,
-                            ParentMenuItem = menuItem,
-                            _commandService = MenuBar._commandService
-                        };
-                        subMenuItem.Header = scroller;
-                    }
+                        DataContext = menuItem.DataContext,
+                        ParentContainer = this,
+                        ParentMenuItem = menuItem,
+                        _commandService = MenuBar._commandService
+                    };
+                    subMenuItem.Header = scroller;
                 }
             }
         }

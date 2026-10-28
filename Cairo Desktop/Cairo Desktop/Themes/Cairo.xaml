@@ -2913,6 +2913,7 @@
                                   CanContentScroll="True"
                                   VerticalScrollBarVisibility="Disabled">
                         <VirtualizingStackPanel Orientation="Horizontal"
+                                                FlowDirection="LeftToRight"
                                                 IsItemsHost="True"
                                                 Margin="0,4,0,0" />
                     </ScrollViewer>
