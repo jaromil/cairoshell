@@ -2879,10 +2879,11 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ItemsControl">
-                    <ScrollViewer HorizontalScrollBarVisibility="Auto"
-                                  VerticalScrollBarVisibility="Disabled"
+                    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                                  VerticalScrollBarVisibility="Auto"
                                   FocusVisualStyle="{x:Null}">
-                        <WrapPanel Orientation="Vertical"
+                        <WrapPanel Orientation="Horizontal"
+                                   FlowDirection="LeftToRight"
                                    IsItemsHost="True" />
                     </ScrollViewer>
                 </ControlTemplate>

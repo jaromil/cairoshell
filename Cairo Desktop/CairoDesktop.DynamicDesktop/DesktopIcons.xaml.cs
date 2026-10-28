@@ -136,9 +136,9 @@ namespace CairoDesktop.DynamicDesktop
                 return;
 
             if (e.Delta < 0)
-                scrollViewer.LineRight();
+                scrollViewer.LineDown();
             else
-                scrollViewer.LineLeft();
+                scrollViewer.LineUp();
 
             e.Handled = true;
         }
